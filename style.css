@@ -1,0 +1,368 @@
+```css
+/* ================================
+   CURRENCY CONVERTER - MODERN UI
+   ================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================================
+   BODY
+   ================================ */
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef4ff, #dfe9f7);
+    color: #252b3a;
+    padding: 40px 20px;
+}
+
+/* ================================
+   HEADING
+   ================================ */
+
+.heading {
+    margin: 10px 0 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px !important;
+    font-weight: 700;
+    color: #1d3557;
+    letter-spacing: -1px;
+}
+
+body > hr {
+    width: 60px;
+    height: 4px;
+    margin: 0 auto 35px;
+    border: none;
+    border-radius: 10px;
+    background: #457b9d;
+}
+
+/* ================================
+   MAIN CONTAINER
+   ================================ */
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+}
+
+/* ================================
+   CONVERTER CARD
+   ================================ */
+
+.main {
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(30, 55, 90, 0.12);
+}
+
+/* ================================
+   LABELS
+   ================================ */
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #344054;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ================================
+   AMOUNT INPUT
+   ================================ */
+
+.searchBox {
+    height: 60px !important;
+    padding: 12px 18px !important;
+    border: 2px solid #e3e8ef !important;
+    border-radius: 14px !important;
+    background-color: #f8fafc !important;
+    color: #1d2939 !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px !important;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.searchBox::placeholder {
+    color: #98a2b3;
+}
+
+.searchBox:focus {
+    border-color: #457b9d !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 4px rgba(69, 123, 157, 0.12) !important;
+    outline: none;
+}
+
+/* ================================
+   CURRENCY ROW
+   ================================ */
+
+.row {
+    margin-top: 10px;
+}
+
+/* From / To labels */
+.input-group-prepend .input-group-text {
+    min-width: 65px;
+    justify-content: center;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    background: #1d3557;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Currency dropdown */
+.from,
+.to {
+    height: 52px !important;
+    border: 2px solid #e3e8ef !important;
+    border-left: none !important;
+    border-radius: 0 12px 12px 0 !important;
+    background-color: #f8fafc !important;
+    color: #1d2939 !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.from:focus,
+.to:focus {
+    border-color: #457b9d !important;
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+/* Dropdown options */
+.form-control option {
+    padding: 10px;
+    background: #ffffff;
+    color: #1d2939;
+}
+
+/* ================================
+   BUTTON AREA
+   ================================ */
+
+.text-center {
+    text-align: center;
+}
+
+/* All buttons */
+.btn {
+    min-width: 130px;
+    height: 48px;
+    padding: 10px 24px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px !important;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Convert button */
+.convert {
+    background: linear-gradient(135deg, #1d3557, #457b9d) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 18px rgba(29, 53, 87, 0.2);
+}
+
+.convert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(29, 53, 87, 0.25);
+}
+
+.convert:active {
+    transform: translateY(0);
+}
+
+/* Reset button */
+.btn-primary:not(.convert) {
+    background: #eef2f6 !important;
+    border: 1px solid #d8dee8 !important;
+    color: #475467 !important;
+    box-shadow: none;
+}
+
+.btn-primary:not(.convert):hover {
+    background: #e2e8f0 !important;
+    color: #1d2939 !important;
+}
+
+/* ================================
+   RESULT SECTION
+   ================================ */
+
+#finalAmount {
+    margin-top: 25px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e6ebf1;
+    box-shadow: 0 10px 30px rgba(30, 55, 90, 0.08);
+}
+
+/* Result heading */
+#finalAmount h2 {
+    margin: 0;
+    color: #667085;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Converted number */
+.finalValue {
+    display: block;
+    margin-top: 8px;
+    color: #198754 !important;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* ================================
+   HOVER EFFECTS
+   ================================ */
+
+.main:hover {
+    box-shadow: 0 25px 60px rgba(30, 55, 90, 0.15);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .heading {
+        font-size: 32px !important;
+    }
+
+    .main {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-sm-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .input-group {
+        margin-bottom: 15px !important;
+    }
+
+    .finalValue {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .heading {
+        font-size: 27px !important;
+    }
+
+    body > hr {
+        margin-bottom: 25px;
+    }
+
+    .main {
+        padding: 22px 16px;
+    }
+
+    .searchBox {
+        height: 55px !important;
+        font-size: 18px !important;
+    }
+
+    .input-group-prepend .input-group-text {
+        min-width: 58px;
+        font-size: 13px;
+    }
+
+    .from,
+    .to {
+        height: 50px !important;
+        font-size: 14px;
+    }
+
+    .btn {
+        min-width: 115px;
+        padding: 9px 16px !important;
+        font-size: 14px !important;
+    }
+
+    #finalAmount {
+        padding: 20px 15px;
+    }
+
+    #finalAmount h2 {
+        font-size: 14px;
+    }
+
+    .finalValue {
+        font-size: 27px;
+    }
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+
+button:focus,
+select:focus,
+input:focus {
+    outline: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+```
